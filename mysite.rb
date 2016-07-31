@@ -3,7 +3,7 @@ require 'rack'
 #class MySite 
 class Home
 	def call(env)
-		headers = {"Content-Type" => "text/html"}
+		headers = {"Content-Type" => "text/html", }
 		content = get_content
 		[200, headers, [content] ]	
 	end
@@ -11,9 +11,9 @@ class Home
 private
 	def get_content
 		%Q{
+
 	<h1>Heather Johnson</h1>
 
-		
 		}
 	end
 end
@@ -67,6 +67,22 @@ private
 		}
 	end
 end
+
+class Contact
+	def call(env)
+		headers = {"Content-Type" => "text/html"}
+		content = get_content
+		[200, headers, [content] ]	
+	end
+	
+private
+	def get_content
+		%Q{
+	<h1>How to Get In Touch with Heather</h1>
+<p>Email: <a href = "mailto:heather@johnsonch.com">heather@johnsonch.com</a></p>
+		}
+	end
+end
 	
 
 app = Rack::Builder.new do
@@ -84,9 +100,9 @@ map "/resume" do
 	run Resume.new
 	end
 
-#map "/contact" do
-	#run Contact.new
-	#end
+map "/contact" do
+	run Contact.new
+	end
 
 #map "/submit_contact" do
 	#run SubmitContact.new
