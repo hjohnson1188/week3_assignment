@@ -12,7 +12,7 @@ private
 	def get_content
 		%Q{
 	<h1>Heather Johnson</h1>
-<p>Current Mobile Software Developer Program student at Chippewa Valley Technical College</p>
+
 		
 		}
 	end
@@ -29,7 +29,9 @@ private
 	def get_content
 		%Q{
 		<h1>About</h1>
-		<p>This is the about page</p>
+			<p>Current Mobile Software Developer Program student at Chippewa Valley Technical College</p>
+			<p>Figure Skating Coach</p>
+			<p>Trusted babysitter by many</p>
 		}
 	end
 end
@@ -44,19 +46,24 @@ class Resume
 private
 	def get_content
 		%Q{
-	<h1>Heather Johnson's Resume</h1>
-<h2>Current Languages Known:</h2>
-	<ul>
-		<li>HTML</li>
-		<li>JavaScript</li>
-		<li>Jquery</li>
-		<li>CSS</li>
-	</ul>
-<h2>Currently Working On:</h2>
-	<ul>
-		<li>Ruby</li>
-		<li>Swift</>
-	</ul>
+<h1>Heather Johnson's Resume</h1>
+		<h2>Experience:</h2>
+			<p>None so far</p>
+		<h2>Education:</h2>
+			<p>In Progress: Mobile Software Program - Chippewa Valley Technical College</p>
+			<p>Compleated: Bachelors of Arts in Psychology and Child Development - University Of Wisconsin Eau Claire</p>
+		<h2>Current Languages Known:</h2>
+			<ul>
+				<li>HTML</li>
+				<li>JavaScript</li>
+				<li>Jquery</li>
+				<li>CSS</li>
+			</ul>
+		<h2>Currently Working On:</h2>
+			<ul>
+				<li>Ruby</li>
+				<li>Swift</>
+			</ul>
 		}
 	end
 end
@@ -73,9 +80,9 @@ map "/about_me" do
 		run About.new
 	end
 	
-#map "/resume" do
-	#run Resume.new
-	#end
+map "/resume" do
+	run Resume.new
+	end
 
 #map "/contact" do
 	#run Contact.new
