@@ -5,7 +5,7 @@ class MySite
 	
 end
 
-app = MySite.new
+app = Rack::Builder.new do
 
 
 map "/" do
@@ -27,7 +27,7 @@ map "/contact" do
 map "/submit_contact" do
 	run SubmitContact.new
 	end
-
+end
 
 server = Rack::Server.new(:app => app, :server => :webrick)
 server.start
