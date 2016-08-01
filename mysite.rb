@@ -80,6 +80,7 @@ private
 		%Q{
 	<h1>How to Get In Touch with Heather</h1>
 <p>Email: <a href = "mailto:heather@johnsonch.com">heather@johnsonch.com</a></p>
+<p>Phone: 715-379-2039</p>
 		}
 	end
 end
